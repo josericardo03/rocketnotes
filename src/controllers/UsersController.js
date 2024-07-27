@@ -23,6 +23,7 @@ class UsersController {
     const user = await database.get("SELECT * FROM users WHERE id = (?)", [
       user_id,
     ]);
+    console.log("Oi");
 
     if (!user) {
       throw new AppError("Usuário não encontrado");
